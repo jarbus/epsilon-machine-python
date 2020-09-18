@@ -4,8 +4,8 @@ from functools import partial, reduce
 import sys
 import os
 
-from parse_tree_node import ParseTreeNode
-from morph_processor import MorphProcessor
+from em.parse_tree_node import ParseTreeNode
+from em.morph_processor import MorphProcessor
 import random
 from tqdm import tqdm
 
@@ -27,7 +27,7 @@ for j in tqdm(range(len(history) - 5)):
     s1, s2, s3, s4, s5 = history[j : j + 5]
     root[s1][s2][s3][s4][s5].value += 1
 
-mp = MorphProcessor(D=5, K=2, L=1)
+mp = MorphProcessor(D=4, K=2, L=1)
 mp.process_morphs(root)
 statefile = "example-state.txt"
 root.generate_state_diagram(file=statefile)

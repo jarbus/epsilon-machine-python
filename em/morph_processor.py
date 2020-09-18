@@ -1,4 +1,4 @@
-from parse_tree_node import ParseTreeNode
+from em.parse_tree_node import ParseTreeNode
 from typing import Dict, Sequence, List
 from collections import defaultdict
 import plantuml
